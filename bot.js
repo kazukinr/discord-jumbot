@@ -8,6 +8,10 @@ client.on('ready', () => {
 client.on('message', message => {
   var channel = message.channel;
   var author = message.author;
+  if (author.id === client.user.id) {
+    return;
+  }
+  
   if (message.content === 'iizo' || message.content === 'いいぞ' || message.content === 'いいぞ。') {
     channel.sendMessage(iizo());
     return;
@@ -26,16 +30,18 @@ function iizo() {
   var rand = Math.floor(Math.random() * 20);
   if (rand < 10) {
     return 'いいぞ。';
-  } else if (rand < 15) {
-    return 'もっと　がんばらないと　だめだぞ。';
-  } else if (rand < 17) {
-    return 'いちりゅうの　ごるふぁーに　なれ';
-  } else if (rand < 18) {
-    return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
-  } else {
-    var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
-    return RARE_REACTIONS[rareIndex];
   }
+  if (rand < 15) {
+    return 'もっと　がんばらないと　だめだぞ。';
+  }
+  if (rand < 17) {
+    return 'いちりゅうの　ごるふぁーに　なれ';
+  }
+  if (rand < 18) {
+    return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
+  }
+  var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
+  return RARE_REACTIONS[rareIndex];
 }
 const RARE_REACTIONS = [
   'うが　いいんじゃないかな。',
