@@ -4,13 +4,13 @@ exports.execute = function () {
     if (rand < 3) {
         return 'いいぞ。';
     }
-    if (rand < 6) {
+    if (rand < 5) {
         return 'もっと　がんばらないと　だめだぞ。';
     }
-    if (rand < 7) {
+    if (rand < 6) {
         return 'いちりゅうの　ごるふぁーに　なれ';
     }
-    if (rand < 8) {
+    if (rand < 7) {
         return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
     }
     var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
