@@ -1,16 +1,16 @@
 // IIZO Reaction.
 exports.execute = function () {
-    var rand = Math.floor(Math.random() * 20);
-    if (rand < 10) {
+    var rand = Math.floor(Math.random() * 10);
+    if (rand < 3) {
         return 'いいぞ。';
     }
-    if (rand < 15) {
+    if (rand < 6) {
         return 'もっと　がんばらないと　だめだぞ。';
     }
-    if (rand < 17) {
+    if (rand < 7) {
         return 'いちりゅうの　ごるふぁーに　なれ';
     }
-    if (rand < 18) {
+    if (rand < 8) {
         return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
     }
     var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
