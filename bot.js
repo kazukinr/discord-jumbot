@@ -28,10 +28,7 @@ client.on('message', message => {
       channel.sendMessage(generated);
       return;
     }
-
-    channel.sendMessage(':heart:');
-
-
+    
   } catch (e) {
     channel.sendMessage('えらーが　おきたぞ。\n' + e);
   }

@@ -3,5 +3,6 @@ exports.execute = function () {
         + 'Usage: jumbot <command> <option>\n\n'
         + 'げんざい　しようできる　こまんどは　これだけだぞ。\n\n'
         + 'buki : もんはんの　ぶきを　おすすめするぞ。\n'
-        + 'help : いま　つかったぞ。';
+        + 'help : いま　つかったぞ。\n\n'
+        + 'よばれなくても　たまに　しゃべるようになったぞ';
 }
