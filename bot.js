@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 // models.
-var iizo = require('./command/iizo');
-var buki_roulette = require('./command/buki_roulette')
+var iizo = require('./message/iizo');
+var command = require('./jumbot_command')
 
 client.on('ready', () => {
   console.log('I am ready!');
@@ -21,8 +21,9 @@ client.on('message', message => {
     return;
   }
 
-  if (message.content === 'jumbot buki') {
-    channel.sendMessage(buki_roulette.execute(author.username));
+  var args = message.content.match(/^jumbot (.+)$/);
+  if (args.length == 2) {
+    channel.sendMessage(command.execute(author.username, args[1]));
     return;
   }
 });
