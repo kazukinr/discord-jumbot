@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 // models.
-var reaction = require('./jumbot_reaction');
+var iizo = require('./message/iizo');
 var command = require('./jumbot_command')
 
 client.on('ready', () => {
@@ -16,20 +16,15 @@ client.on('message', message => {
     return;
   }
 
-  try {
-    var generated = reaction.execute(author.username, message.content);
-    if (generated != null) {
-      channel.sendMessage(generated);
-      return;
-    }
+  if (/いいぞ/.test(message.content)) {
+    channel.sendMessage(iizo.execute());
+    return;
+  }
 
-    var args = message.content.match(/^jumbot (.+)$/);
-    if (args != null && args.length == 2) {
-      channel.sendMessage(command.execute(author.username, args[1]));
-      return;
-    }
-  } catch (e) {
-    channel.sendMessage('えらーが　おきたぞ。\n' + e);
+  var args = message.content.match(/^jumbot (.+)$/);
+  if (args != null && args.length == 2) {
+    channel.sendMessage(command.execute(author.username, args[1]));
+    return;
   }
 });
 
