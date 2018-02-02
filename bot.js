@@ -22,7 +22,7 @@ client.on('message', message => {
   }
 
   var args = message.content.match(/^jumbot (.+)$/);
-  if (args.length == 2) {
+  if (args != null && args.length == 2) {
     channel.sendMessage(command.execute(author.username, args[1]));
     return;
   }
