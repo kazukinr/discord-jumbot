@@ -1,23 +1,17 @@
-// IIZO Reaction.
-exports.execute = function () {
-    var rand = Math.floor(Math.random() * 10);
-    if (rand < 3) {
-        return 'いいぞ。';
+// Random Reaction.
+exports.execute = function() {
+    if (Math.floor(Math.random() * 10) == 0) {
+        var index = Math.floor(Math.random() * RANDOM_REACTIONS.length);
+        return RANDOM_REACTIONS[index];
     }
-    if (rand < 5) {
-        return 'もっと　がんばらないと　だめだぞ。';
-    }
-    if (rand < 6) {
-        return 'いちりゅうの　ごるふぁーに　なれ';
-    }
-    if (rand < 7) {
-        return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
-    }
-    var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
-    return RARE_REACTIONS[rareIndex];
+    return null;
 }
 
-const RARE_REACTIONS = [
+const RANDOM_REACTIONS = [
+    'いいぞ。',
+    'もっと　がんばらないと　だめだぞ。',
+    'いちりゅうの　ごるふぁーに　なれ',
+    'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。',
     'うが　いいんじゃないかな。',
     'うみから　うとう。',
     'うみきれないよ。',
@@ -61,5 +55,31 @@ const RARE_REACTIONS = [
     'もっとはやれ゛。',
     'もめし。',
     'もんとに。',
-    'やく　きいてくれなくちゃ　あどは'
+    'やく　きいてくれなくちゃ　あどは',
+    'えいえい、おこった？',
+    'おこってないよ :heart:',
+    'いっぱいちゅき :heart:',
+    '不思議なことに申し訳ないと言う気持ちが1ミリもわいてこない…',
+    'ナメプですわ！',
+    '竹書房ゥァア゛ーッ',
+    'わたしだよ！',
+    'あーそーゆーことね　完全に理解した',
+    'ウゥワッ　クッソつまんなそ〜',
+    'なんだ…？　テメェ…',
+    'しゃっせー',
+    'ざっしたー',
+    'エイサァァ〜イ　ハラマスコ〜イ',
+    'さてはアンチだなオメー',
+    'もしもし　ポリスメン？',
+    'びょうきじゃん？',
+    'いっちょ…"世界"獲ってきますかァ…！',
+    'うそやろ…',
+    'ぜったい流行る',
+    'よ、よくわかんないけど、病院とか行ったほうがいいんじゃないかな？',
+    'ゾ・ゾ・ゾ　ゾ〜ンビ〜 :notes: ゾンビ〜 :notes: ホ〜テ〜 :notes:',
+    '大丈夫　きぜつしただけだ',
+    'ボブネミミッミ',
+    'どこだ',
+    '背中を押せ',
+    '首を出せ'
 ];

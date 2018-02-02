@@ -17,17 +17,18 @@ client.on('message', message => {
   }
 
   try {
-    var generated = reaction.execute(author.username, message.content);
-    if (generated != null) {
-      channel.sendMessage(generated);
-      return;
-    }
-
     var args = message.content.match(/^jumbot (.+)$/);
     if (args != null && args.length == 2) {
       channel.sendMessage(command.execute(author.username, args[1]));
       return;
     }
+
+    var generated = reaction.execute(author.username, message.content);
+    if (generated != null) {
+      channel.sendMessage(generated);
+      return;
+    }
+    
   } catch (e) {
     channel.sendMessage('えらーが　おきたぞ。\n' + e);
   }
