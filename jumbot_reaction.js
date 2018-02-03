@@ -1,11 +1,9 @@
 // models.
-var iizo = require('./message/iizo');
-var random = require('./message/random')
+var iizo = require('./reaction/iizo');
 
-exports.execute = function (username, content) {
-    if (/いいぞ/.test(content)) {
-        return iizo.execute();
+exports.run = function (client, message) {
+
+    if (/いいぞ/.test(message.content)) {
+        iizo.run(message);
     }
-    
-    return random.execute();
 }
