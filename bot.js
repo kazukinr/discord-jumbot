@@ -9,19 +9,17 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  try {
-    if (message.author.bot) return;
+  if (message.author.bot) return;
 
+  try {
     // command
     const prefix = '!';
     if (message.content.startsWith(prefix)) {
-      message.channel.sendMessage('テスト中。');
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();
 
-      message.channel.sendMessage('こまんど：${command}, ぱらめーた：${args}');
+      jumbot_command.run(client, message, command, args);
     }
-
   } catch (e) {
     channel.sendMessage('えらーが　おきたぞ。\n' + e);
   }
