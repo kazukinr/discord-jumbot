@@ -2,33 +2,30 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 // models.
-var reaction = require('./jumbot_reaction');
-var command = require('./jumbot_command')
+var jumbot_command = require('./jumbot_command');
+var jumbot_reaction = require('./jumbot_reaction');
 
 client.on('ready', () => {
   console.log('I am ready!');
 });
 
 client.on('message', message => {
-  var channel = message.channel;
-  var author = message.author;
-  if (author.id === client.user.id) {
-    return;
-  }
+  if (message.author.bot) return;
 
   try {
-    var args = message.content.match(/^jumbot (.+)$/);
-    if (args != null && args.length == 2) {
-      channel.sendMessage(command.execute(author.username, args[1]));
+    // command
+    const prefix = '!';
+    if (message.content.startsWith(prefix)) {
+      const args = message.content.slice(prefix.length).trim().split(/ +/g);
+      const command = args.shift().toLowerCase();
+
+      jumbot_command.run(client, message, command, args);
       return;
     }
 
-    var generated = reaction.execute(author.username, message.content);
-    if (generated != null) {
-      channel.sendMessage(generated);
-      return;
-    }
-    
+    // reaction
+    jumbot_reaction.run(client, message);
+
   } catch (e) {
     channel.sendMessage('えらーが　おきたぞ。\n' + e);
   }

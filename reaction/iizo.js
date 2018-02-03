@@ -1,5 +1,9 @@
-// IIZO Reaction.
-exports.execute = function () {
+// Iizo.
+exports.run = function (message) {
+    message.channel.sendMessage(buildMessage());
+}
+
+function buildMessage() {
     var rand = Math.floor(Math.random() * 10);
     if (rand < 3) {
         return 'いいぞ。';

@@ -1,7 +1,7 @@
 // Buki Roulette.
-exports.execute = function (username) {
+exports.run = function (message) {
     var rand = Math.floor(Math.random() * BUKI_LIST.length);
-    return username + 'は　' + BUKI_LIST[rand] + 'をつかわないと　だめだぞ。'
+    message.channel.sendMessage(message.author.username + 'は　' + BUKI_LIST[rand] + 'をつかわないと　だめだぞ。');
 }
 
 const BUKI_LIST = [
