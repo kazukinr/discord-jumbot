@@ -1,5 +1,5 @@
 // models.
-var iizo = require('./reaction/iizo');
+const iizo = require('./reaction/iizo');
 
 exports.run = function (client, message) {
 
