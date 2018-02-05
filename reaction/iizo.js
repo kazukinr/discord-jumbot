@@ -1,4 +1,8 @@
 // Iizo.
+exports.isTarget = function (message) {
+    return /いいぞ/.test(message.content);
+}
+
 exports.run = function (message) {
     message.channel.sendMessage(buildMessage());
 }
