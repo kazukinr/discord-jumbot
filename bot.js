@@ -27,7 +27,7 @@ client.on('message', message => {
     jumbot_reaction.run(client, message);
 
   } catch (e) {
-    channel.sendMessage('えらーが　おきたぞ。\n' + e);
+    message.channel.sendMessage('えらーが　おきたぞ。\n' + e);
   }
 });
 
