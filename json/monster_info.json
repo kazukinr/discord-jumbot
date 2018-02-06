@@ -1,6 +1,98 @@
 {
+    "anjanaf": {
+        "name": "アンジャナフ",
+        "nikushitsu": "anjanaf_nikushitsu.png"
+    },
+    "ganos": {
+        "name": "ヴォルガノス",
+        "nikushitsu": "ganos_nikushitsu.png"
+    },
+    "gankin": {
+        "name": "ウラガンキン",
+        "nikushitsu": "gankin_nikushitsu.png"
+    },
+    "garon": {
+        "name": "オドガロン",
+        "nikushitsu": "garon_nikushitsu.png"
+    },
+    "kirin": {
+        "name": "キリン",
+        "nikushitsu": "kirin_nikushitsu.png"
+    },
+    "kururuyack": {
+        "name": "クルルヤック",
+        "nikushitsu": "kururuyack_nikushitsu.png"
+    },
+    "jura": {
+        "name": "ジュラトドス",
+        "nikushitsu": "jura_nikushitsu.png"
+    },
+    "zora": {
+        "name": "ゾラ・マグダラオス",
+        "nikushitsu": "zora_nikushitsu.png"
+    },
+    "twitwiyack": {
+        "name": "ツィツィヤック",
+        "nikushitsu": "twitwiyack_nikushitsu.png"
+    },
+    "dia": {
+        "name": "ディアブロス",
+        "nikushitsu": "dia_nikushitsu.png"
+    },
+    "giruos": {
+        "name": "ドスギルオス",
+        "nikushitsu": "giruos_nikushitsu.png"
+    },
+    "jagras": {
+        "name": "ドスジャグラス",
+        "nikushitsu": "jagras_nikushitsu.png"
+    },
+    "gamaru": {
+        "name": "ドドガマル",
+        "nikushitsu": "gamaru_nikushitsu.png"
+    },
+    "kagachi": {
+        "name": "トビカガチ",
+        "nikushitsu": "kagachi_nikushitsu.png"
+    },
+    "gigante": {
+        "name": "ネルギガンテ",
+        "nikushitsu": "gigante_nikushitsu.png"
+    },
+    "paourumu": {
+        "name": "パオウルムー",
+        "nikushitsu": "paourumu_nikushitsu.png"
+    },
+    "pukepuke": {
+        "name": "プケプケ",
+        "nikushitsu": "pukepuke_nikushitsu.png"
+    },
+    "boros": {
+        "name": "ボルボロス",
+        "nikushitsu": "boros_nikushitsu.png"
+    },
+    "barukin": {
+        "name": "ラドバルキン",
+        "nikushitsu": "barukin_nikushitsu.png"
+    },
     "reia": {
         "name": "リオレイア",
-        "nikushitsu": "reia_nikushitsu.jpg"
+        "nikushitsu": "reia_nikushitsu.png"
+    },
+    "reia_a": {
+        "name": "リオレイア亜種",
+        "nikushitsu": "reia_a_nikushitsu.png"
+    },
+    "reus": {
+        "name": "リオレウス",
+        "nikushitsu": "reus_nikushitsu.png"
+    },
+    "reus_a": {
+        "name": "リオレウス亜種",
+        "nikushitsu": "reus_a_nikushitsu.png"
+    },
+    "reigiena": {
+        "name": "レイギエナ",
+        "nikushitsu": "reigiena_nikushitsu.png"
     }
 }
