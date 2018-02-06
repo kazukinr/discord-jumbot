@@ -32,8 +32,8 @@ client.on('message', message => {
 });
 
 client.on("guildMemberAdd", member => {
-  const guild = member.guild;
-  guild.channels.get(guild.id).sendMessage('ようこそ、' + member.user.username + '。\nワンポイントレッスンをはじめるぞ。');
+  const general = member.guild.channels.get('408226089828352001');
+  general.sendMessage('ようこそ、' + member.user.username + '。\nワンポイントレッスンをはじめるぞ。');
 });
 
 client.login(process.env.BOT_TOKEN);
