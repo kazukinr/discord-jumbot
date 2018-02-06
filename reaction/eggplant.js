@@ -1,9 +1,9 @@
 // Eggplant.
 exports.isTarget = function (message) {
-    return message.content.indexOf('🍆') >= 0
-        || /なす|ナス|茄子/.test(message.content);
+    return message.author.id == '409122303390253076'
+        && Math.floor(Math.random() * 3) == 0;
 }
 
 exports.run = function (message) {
-    message.channel.sendMessage('(っ’ヮ’)╮-=ﾆ= 三≡’,;’;🍆');
+    message.reply('(っ’ヮ’)╮-=ﾆ= 三≡’,;’;🍆');
 }
