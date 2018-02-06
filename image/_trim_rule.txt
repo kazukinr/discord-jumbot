@@ -1,0 +1,8 @@
+// 肉質情報
+Trim screenshot (1920 * 1080) to (1200 * 720)
+
+top:    185
+bottom: 175
+left:   610
+right:  110
+
