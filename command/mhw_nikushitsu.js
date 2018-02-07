@@ -10,7 +10,7 @@ exports.run = function (client, message, args) {
     }
 
     if (args[0] == 'list' && args.length == 1) {
-        showList(message);
+        showList(client, message);
         return;
     }
 
@@ -46,7 +46,7 @@ exports.run = function (client, message, args) {
     }
 }
 
-function showList(message) {
+function showList(client, message) {
     var listExist = "";
     var listNotExist = "";
 
@@ -59,11 +59,11 @@ function showList(message) {
         }
     }
 
-    message.channel.sendMessage(
-        'げんざい　ひょうじできる　もんすたーは　これだけだぞ。\n'
-        + listExist
-        + '\n'
-        + 'いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。\n'
-        + listNotExist
-    );
+    const embed = new Discord.RichEmbed()
+        .setAuthor(client.user.username, client.user.avatarURL)
+        .addField('げんざい　ひょうじできる　もんすたーは　これだけだぞ。', listExist)
+        .addBlankField(true)
+        .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
+
+    message.channel.sendEmbed(embed);
 }
