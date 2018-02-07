@@ -10,6 +10,15 @@ exports.run = function (client, message, args) {
     }
 
     for (var i = 0; i < args.length; i++) {
+        if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
+            message.channel.sendMessage('おやだまで　ひたいを　なぐろう。');
+            break;
+        }
+        if (/^はぢ(さん)?$/.test(args[i])) {
+            message.channel.sendMessage('なすで　なぐろう。');
+            break;
+        }
+
         const jsonKey = monster_key.getKey(args[i]);
         if (jsonKey == null) {
             message.channel.sendMessage(args[i] + 'というもんすたーは　しらないぞ。');
