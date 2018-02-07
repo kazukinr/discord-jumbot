@@ -3,7 +3,7 @@ exports.isTarget = function (message) {
     return /いいぞ/.test(message.content);
 }
 
-exports.run = function (message) {
+exports.run = function (client, message) {
     message.channel.sendMessage(buildMessage());
 }
 
