@@ -9,6 +9,11 @@ exports.run = function (client, message, args) {
         return;
     }
 
+    if (args[0] == 'list' && args.length == 1) {
+        showList(client, message);
+        return;
+    }
+
     for (var i = 0; i < args.length; i++) {
         if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
             message.channel.sendMessage('おやだまで　ひたいを　なぐろう。');
@@ -39,4 +44,26 @@ exports.run = function (client, message, args) {
 
         message.channel.sendEmbed(embed);
     }
+}
+
+function showList(client, message) {
+    var listExist = "";
+    var listNotExist = "";
+
+    for (let key in monster_info) {
+        const val = monster_info[key];
+        if (val.nikushitsu == null || val.nikushitsu == '') {
+            listNotExist += '- ' + val.name + '\n';
+        } else {
+            listExist += '- ' + val.name + '\n';
+        }
+    }
+
+    const embed = new Discord.RichEmbed()
+        .setAuthor(client.user.username, client.user.avatarURL)
+        .addField('げんざい　ひょうじできる　もんすたーは　これだけだぞ。', listExist)
+        .addBlankField(true)
+        .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
+
+    message.channel.sendEmbed(embed);
 }
