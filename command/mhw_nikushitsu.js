@@ -9,6 +9,11 @@ exports.run = function (client, message, args) {
         return;
     }
 
+    if (args[0] == 'list' && args.length == 1) {
+        showList(message);
+        return;
+    }
+
     for (var i = 0; i < args.length; i++) {
         if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
             message.channel.sendMessage('おやだまで　ひたいを　なぐろう。');
@@ -39,4 +44,26 @@ exports.run = function (client, message, args) {
 
         message.channel.sendEmbed(embed);
     }
+}
+
+function showList(message) {
+    var listExist = "";
+    var listNotExist = "";
+
+    for (let key in monster_info) {
+        const val = monster_info[key];
+        if (val.nikushitsu == null || val.nikushitsu == '') {
+            listNotExist += '- ' + val.name + '\n';
+        } else {
+            listExist += '- ' + val.name + '\n';
+        }
+    }
+
+    message.channel.sendMessage(
+        'げんざい　ひょうじできる　もんすたーは　これだけだぞ。\n'
+        + listExist
+        + '\n'
+        + 'いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。\n'
+        + listNotExist
+    );
 }
