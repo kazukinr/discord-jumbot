@@ -3,6 +3,14 @@
         "name": "アンジャナフ",
         "nikushitsu": "anjanaf_nikushitsu.png"
     },
+    "jaw": {
+        "name": "イビルジョー",
+        "nikushitsu": ""
+    },
+    "valhazak": {
+        "name": "ヴァルハザク",
+        "nikushitsu": ""
+    },
     "ganos": {
         "name": "ヴォルガノス",
         "nikushitsu": "ganos_nikushitsu.png"
@@ -19,6 +27,10 @@
         "name": "キリン",
         "nikushitsu": "kirin_nikushitsu.png"
     },
+    "kusha": {
+        "name": "クシャルダオラ",
+        "nikushitsu": ""
+    },
     "kururuyack": {
         "name": "クルルヤック",
         "nikushitsu": "kururuyack_nikushitsu.png"
@@ -26,6 +38,10 @@
     "jura": {
         "name": "ジュラトドス",
         "nikushitsu": "jura_nikushitsu.png"
+    },
+    "zeno": {
+        "name": "ゼノ・ジーヴァ",
+        "nikushitsu": ""
     },
     "zora": {
         "name": "ゾラ・マグダラオス",
@@ -38,6 +54,14 @@
     "dia": {
         "name": "ディアブロス",
         "nikushitsu": "dia_nikushitsu.png"
+    },
+    "dia_a": {
+        "name": "ディアブロス亜種",
+        "nikushitsu": ""
+    },
+    "teo": {
+        "name": "テオ・テスカトル",
+        "nikushitsu": ""
     },
     "giruos": {
         "name": "ドスギルオス",
@@ -62,6 +86,10 @@
     "paourumu": {
         "name": "パオウルムー",
         "nikushitsu": "paourumu_nikushitsu.png"
+    },
+    "bazeru": {
+        "name": "バゼルギウス",
+        "nikushitsu": ""
     },
     "pukepuke": {
         "name": "プケプケ",

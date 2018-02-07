@@ -12,7 +12,13 @@ exports.run = function (client, message, args) {
     for (var i = 0; i < args.length; i++) {
         const jsonKey = monster_key.getKey(args[i]);
         if (jsonKey == null) {
-            message.channel.sendMessage(args[i] + 'の情報はまだないぞ。');
+            message.channel.sendMessage(args[i] + 'というもんすたーは　しらないぞ。');
+            break;
+        }
+
+        const img = monster_info[jsonKey].nikushitsu;
+        if (img == null || img == '') {
+            message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
             break;
         }
 
