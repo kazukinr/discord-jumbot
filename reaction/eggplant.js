@@ -4,6 +4,6 @@ exports.isTarget = function (message) {
         && Math.floor(Math.random() * 100) == 0;
 }
 
-exports.run = function (message) {
+exports.run = function (client, message) {
     message.reply('(っ’ヮ’)╮-=ﾆ= 三≡’,;’;🍆');
 }
