@@ -42,7 +42,7 @@ exports.run = function (client, message, args) {
             .setAuthor('受付嬢', client.user.avatarURL)
             .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
             .setImage('attachment://image.jpg')
-            .attachFile('./image/' + monster_info[jsonKey].nikushitsu, 'image.jpg');
+            .attachFile('image/' + monster_info[jsonKey].nikushitsu, 'image.jpg');
 
         message.channel.sendEmbed(embed);
     }
