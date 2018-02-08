@@ -37,8 +37,8 @@ exports.run = function (client, message, args) {
         }
 
         const embed = new Discord.RichEmbed()
-            .setAuthor(client.user.username, client.user.avatarURL)
-            .setTitle(monster_info[jsonKey].name + 'の肉質情報だぞ。')
+            .setAuthor('受付嬢', client.user.avatarURL)
+            .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
             .setImage('attachment://image.jpg')
             .attachFile('./image/' + monster_info[jsonKey].nikushitsu, 'image.jpg');
 
@@ -60,7 +60,7 @@ function showList(client, message) {
     }
 
     const embed = new Discord.RichEmbed()
-        .setAuthor(client.user.username, client.user.avatarURL)
+        .setAuthor('受付嬢', client.user.avatarURL)
         .addField('げんざい　ひょうじできる　もんすたーは　これだけだぞ。', listExist)
         .addBlankField(true)
         .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
