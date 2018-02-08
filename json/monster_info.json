@@ -61,7 +61,7 @@
     },
     "teo": {
         "name": "テオ・テスカトル",
-        "nikushitsu": ""
+        "nikushitsu": "teo_nikushitsu.png"
     },
     "giruos": {
         "name": "ドスギルオス",
@@ -89,7 +89,7 @@
     },
     "bazeru": {
         "name": "バゼルギウス",
-        "nikushitsu": ""
+        "nikushitsu": "bazeru_nikushitsu.png"
     },
     "pukepuke": {
         "name": "プケプケ",
