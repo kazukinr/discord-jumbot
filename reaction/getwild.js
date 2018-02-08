@@ -4,11 +4,13 @@ exports.isTarget = function (message) {
 }
 
 exports.run = function (client, message) {
-    if (message.isMemberMentioned(client.user) && message.member.voiceChannel)
+    if (message.member.voiceChannel)
     {
         message.member.voiceChannel.join().then( connection => {
-            const dispatcher = connection.playFile('./audio/getwild.mp3');
+            message.channel.sendMessage('げっと わいるど をながすぞ');
+            const dispatcher = connection.playFile('getwild.mp3');
             dispatcher.on('end', reason => {
+                message.channel.sendMessage('おんがくが おわったぞ');
                 connection.disconnect();
             });
         })
