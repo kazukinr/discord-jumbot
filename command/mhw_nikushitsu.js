@@ -4,6 +4,8 @@ const Discord = require('discord.js');
 const monster_key = require('../util/monster_key');
 const monster_info = require('../json/monster_info.json');
 
+exports.command = 'niku';
+
 exports.run = function (client, message, args) {
     if (args == null || args.length == 0) {
         return;
