@@ -88,7 +88,7 @@ exports.getKey = function (name) {
         return 'paourumu';
     }
     // バゼルギウス
-    if (/バゼル|ギウス/.test(name)) {
+    if (/バゼル|ギウス|爆撃|うんこ|ウンコ|💩/.test(name)) {
         return 'bazeru';
     }
     // プケプケ

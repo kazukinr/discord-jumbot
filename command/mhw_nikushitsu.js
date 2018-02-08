@@ -23,10 +23,6 @@ exports.run = function (client, message, args) {
             message.channel.sendMessage('なすで　なぐろう。');
             break;
         }
-        if (/^(うんこ|ウンコ)/.test(args[i])) {
-            message.channel.sendMessage('といれに　ながそう。');
-            break;
-        }
 
         const jsonKey = monster_key.getKey(args[i]);
         if (jsonKey == null) {
