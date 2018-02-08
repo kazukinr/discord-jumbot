@@ -1,5 +1,7 @@
 // Kari Roulette.
-exports.run = function (message) {
+exports.command = 'kari';
+
+exports.run = function (client, message, args) {
     if (Math.floor(Math.random() * 30) == 0) {
         // muri
         message.channel.sendMessage(
