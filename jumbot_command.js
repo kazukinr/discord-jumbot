@@ -2,7 +2,8 @@
 const commands = [
     require('./command/buki_roulette'),
     require('./command/kari_roulette'),
-    require('./command/mhw_nikushitsu')
+    require('./command/mhw_nikushitsu'),
+    require('./command/emoji')
 ]
 
 exports.run = function (client, message, command, args) {

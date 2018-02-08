@@ -38,4 +38,11 @@ client.on("guildMemberAdd", member => {
   }
 });
 
+client.on("emojiCreate", emoji => {
+  const general = emoji.guild.channels.find("name", "general");
+  if (general != null) {
+    general.sendMessage('えもじが　とうろくされたぞ。\n' + emoji.toString() + '  :' + emoji.name + ':');
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
