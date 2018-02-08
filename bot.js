@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 // models.
-var jumbot_command = require('./jumbot_command');
-var jumbot_reaction = require('./jumbot_reaction');
+const jumbot_command = require('./jumbot_command');
+const jumbot_reaction = require('./jumbot_reaction');
 
 client.on('ready', () => {
   console.log('I am ready!');

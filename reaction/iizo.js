@@ -8,7 +8,7 @@ exports.run = function (client, message) {
 }
 
 function buildMessage() {
-    var rand = Math.floor(Math.random() * 10);
+    const rand = Math.floor(Math.random() * 10);
     if (rand < 3) {
         return 'いいぞ。';
     }
