@@ -1,5 +1,6 @@
 // MHW nikushitsu.
 const Discord = require('discord.js');
+const fs = require('fs');
 
 const monster_key = require('../util/monster_key');
 const monster_info = require('../json/monster_info.json');
@@ -32,8 +33,7 @@ exports.run = function (client, message, args) {
             break;
         }
 
-        const img = monster_info[jsonKey].nikushitsu;
-        if (img == null || img == '') {
+        if (!exists(jsonKey)) {
             message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
             break;
         }
@@ -41,8 +41,8 @@ exports.run = function (client, message, args) {
         const embed = new Discord.RichEmbed()
             .setAuthor('受付嬢', client.user.avatarURL)
             .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
-            .setImage('attachment://image.jpg')
-            .attachFile('image/' + monster_info[jsonKey].nikushitsu, 'image.jpg');
+            .setImage('attachment://image.png')
+            .attachFile(toImagePath(jsonKey), 'image.png');
 
         message.channel.sendEmbed(embed);
     }
@@ -53,11 +53,10 @@ function showList(client, message) {
     var listNotExist = "";
 
     for (let key in monster_info) {
-        const val = monster_info[key];
-        if (val.nikushitsu == null || val.nikushitsu == '') {
-            listNotExist += '- ' + val.name + '\n';
+        if (exists(key)) {
+            listExist += '- ' + monster_info[key].name + '\n';
         } else {
-            listExist += '- ' + val.name + '\n';
+            listNotExist += '- ' + monster_info[key].name + '\n';
         }
     }
 
@@ -68,4 +67,17 @@ function showList(client, message) {
         .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
 
     message.channel.sendEmbed(embed);
+}
+
+function exists(key) {
+    try {
+        fs.statSync(toImagePath(key));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+function toImagePath(key) {
+    return 'image/nikushitsu/' + key + '.png';
 }
