@@ -1,130 +1,126 @@
-exports.getKeys = function (name) {
-    const results = [];
-
+exports.getKey = function (name) {
     // アンジャナフ
     if (/アン|ジャナフ/.test(name)) {
-        results.push('anjanaf');
+        return 'anjanaf';
     }
     // イビルジョー
     if (/イビル|ジョー/.test(name)) {
-        results.push('jaw');
+        return 'jaw';
     }
     // ヴァルハザク
     if (/ヴァル|ハザク/.test(name)) {
-        results.push('valhazak');
+        return 'valhazak';
     }
     // ヴォルガノス
     if (/ヴォル|ガノス/.test(name)) {
-        results.push('ganos');
+        return 'ganos';
     }
     // ウラガンキン
     if (/ウラガン|ガンキン|顎|アゴ|あご/.test(name)) {
-        results.push('gankin');
+        return 'gankin';
     }
     // オドガロン
     if (/オド|ガロン/.test(name)) {
-        results.push('garon');
+        return 'garon';
     }
     // キリン
     if (/キリン/.test(name)) {
-        results.push('kirin');
+        return 'kirin';
     }
     // クシャルダオラ
     if (/クシャ|ダオラ/.test(name)) {
-        results.push('kusha');
+        return 'kusha';
     }
     // クルルヤック
     if (/クルル|ヤック/.test(name)) {
-        results.push('kururuyack');
+        return 'kururuyack';
     }
     // ジュラトドス
     if (/ジュラ|トドス/.test(name)) {
-        results.push('jura');
+        return 'jura';
     }
     // ゼノ・ジーヴァ
     if (/ゼノ|ジーヴァ/.test(name)) {
-        results.push('zeno');
+        return 'zeno';
     }
     // ゾラ・マグダラオス
     if (/ゾラ|マグ|ダラオス/.test(name)) {
-        results.push('zora');
+        return 'zora';
     }
     // ツィツィヤック
     if (/ツィ|ヤック/.test(name)) {
-        results.push('twitwiyack');
+        return 'twitwiyack';
     }
     // ディアブロス
     if (/ディア/.test(name)) {
         if (/亜|黒/.test(name)) {
-            results.push('dia_a');
+            return 'dia_a';
         } else {
-            results.push('dia');
+            return 'dia';
         }
     }
     // テオ・テスカトル
     if (/テオ|テスカトル/.test(name)) {
-        results.push('teo');
+        return 'teo';
     }
     // ドスギルオス
     if (/ドス|ギルオス/.test(name)) {
-        results.push('giruos');
+        return 'giruos';
     }
     // ドスジャグラス
     if (/ドス|ジャグラス/.test(name)) {
-        results.push('jagras');
+        return 'jagras';
     }
     // ドドガマル
     if (/ドド|ガマル/.test(name)) {
-        results.push('gamaru');
+        return 'gamaru';
     }
     // トビカガチ
     if (/トビ|カガチ/.test(name)) {
-        results.push('kagachi');
+        return 'kagachi';
     }
     // ネルギガンテ
     if (/ネル|ギガンテ/.test(name)) {
-        results.push('gigante');
+        return 'gigante';
     }
     // パオウルムー
     if (/パオ|ウルムー|ふわ|フワ/.test(name)) {
-        results.push('paourumu');
+        return 'paourumu';
     }
     // バゼルギウス
     if (/バゼル|ギウス|爆撃|うんこ|ウンコ|💩/.test(name)) {
-        results.push('bazeru');
+        return 'bazeru';
     }
     // プケプケ
     if (/プケ/.test(name)) {
-        results.push('pukepuke');
+        return 'pukepuke';
     }
     // ボルボロス
     if (/ボル|ボロス/.test(name)) {
-        results.push('boros');
+        return 'boros';
     }
     // ラドバルキン
     if (/ラド|バルキン/.test(name)) {
-        results.push('barukin');
+        return 'barukin';
     }
     // リオレイア
     if (/レイア/.test(name)) {
         if (/桜|亜/.test(name)) {
-            results.push('reia_a');
+            return 'reia_a';
         } else {
-            results.push('reia');
+            return 'reia';
         }
     }
     //　リオレウス
     if (/レウス/.test(name)) {
         if (/青|蒼|亜/.test(name)) {
-            results.push('reus_a');
+            return 'reus_a';
         } else {
-            results.push('reus');
+            return 'reus';
         }
     }
     // レイギエナ
-    if (/レイギ|ギエナ/.test(name)) {
-        results.push('reigiena');
+    if (/レイ|ギエナ/.test(name)) {
+        return 'reigiena';
     }
-
-    return results;
 }
