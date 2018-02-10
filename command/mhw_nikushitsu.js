@@ -67,8 +67,8 @@ exports.run = function (client, message, args) {
 }
 
 function showList(client, message) {
-    var listExist = "";
-    var listNotExist = "";
+    var listExist = '';
+    var listNotExist = '';
 
     for (let key in monster_info) {
         if (imagePaths.includes(key)) {
@@ -80,9 +80,12 @@ function showList(client, message) {
 
     const embed = new Discord.RichEmbed()
         .setAuthor('受付嬢', client.user.avatarURL)
-        .addField('げんざい　ひょうじできる　もんすたーは　これだけだぞ。', listExist)
-        .addBlankField(true)
-        .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
+        .addField('げんざい　ひょうじできる　もんすたーは　これだけだぞ。', listExist);
+
+    if (listNotExist != '') {
+        embed.addBlankField(true)
+            .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
+    }
 
     message.channel.sendEmbed(embed);
 }
