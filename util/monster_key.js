@@ -1,6 +1,6 @@
 exports.getKey = function (name) {
     // アンジャナフ
-    if (/ジャナフ/.test(name)) {
+    if (/アン|ジャナフ/.test(name)) {
         return 'anjanaf';
     }
     // イビルジョー
@@ -20,7 +20,7 @@ exports.getKey = function (name) {
         return 'gankin';
     }
     // オドガロン
-    if (/ガロン/.test(name)) {
+    if (/オド|ガロン/.test(name)) {
         return 'garon';
     }
     // キリン
@@ -32,7 +32,7 @@ exports.getKey = function (name) {
         return 'kusha';
     }
     // クルルヤック
-    if (/クルル/.test(name)) {
+    if (/クルル|ヤック/.test(name)) {
         return 'kururuyack';
     }
     // ジュラトドス
@@ -44,11 +44,11 @@ exports.getKey = function (name) {
         return 'zeno';
     }
     // ゾラ・マグダラオス
-    if (/ゾラ|マグダラオス/.test(name)) {
+    if (/ゾラ|マグ|ダラオス/.test(name)) {
         return 'zora';
     }
     // ツィツィヤック
-    if (/ツィ/.test(name)) {
+    if (/ツィ|ヤック/.test(name)) {
         return 'twitwiyack';
     }
     // ディアブロス
@@ -64,11 +64,11 @@ exports.getKey = function (name) {
         return 'teo';
     }
     // ドスギルオス
-    if (/ドスギル|ギルオス/.test(name)) {
+    if (/ドス|ギルオス/.test(name)) {
         return 'giruos';
     }
     // ドスジャグラス
-    if (/ドスジャ|ジャグラス/.test(name)) {
+    if (/ドス|ジャグラス/.test(name)) {
         return 'jagras';
     }
     // ドドガマル
@@ -84,7 +84,7 @@ exports.getKey = function (name) {
         return 'gigante';
     }
     // パオウルムー
-    if (/パオ|ウルムー|ふわふわ/.test(name)) {
+    if (/パオ|ウルムー|ふわ|フワ/.test(name)) {
         return 'paourumu';
     }
     // バゼルギウス
@@ -96,7 +96,7 @@ exports.getKey = function (name) {
         return 'pukepuke';
     }
     // ボルボロス
-    if (/ボロス/.test(name)) {
+    if (/ボル|ボロス/.test(name)) {
         return 'boros';
     }
     // ラドバルキン
