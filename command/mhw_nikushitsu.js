@@ -37,24 +37,28 @@ exports.run = function (client, message, args) {
             break;
         }
 
-        const jsonKey = monster_key.getKey(args[i]);
-        if (jsonKey == null) {
+        const jsonKeys = monster_key.getKeys(args[i]);
+        if (jsonKeys == null || jsonKeys.length == 0) {
             message.channel.sendMessage(args[i] + 'というもんすたーは　しらないぞ。');
             break;
         }
 
-        if (!imagePaths.includes(jsonKey)) {
-            message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
-            break;
+        for (let index in jsonKeys) {
+            const jsonKey = jsonKeys[index];
+
+            if (!imagePaths.includes(jsonKey)) {
+                message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
+                break;
+            }
+
+            const embed = new Discord.RichEmbed()
+                .setAuthor('受付嬢', client.user.avatarURL)
+                .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
+                .setImage('attachment://image.png')
+                .attachFile(toImagePath(jsonKey), 'image.png');
+
+            message.channel.sendEmbed(embed);
         }
-
-        const embed = new Discord.RichEmbed()
-            .setAuthor('受付嬢', client.user.avatarURL)
-            .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
-            .setImage('attachment://image.png')
-            .attachFile(toImagePath(jsonKey), 'image.png');
-
-        message.channel.sendEmbed(embed);
     }
 }
 

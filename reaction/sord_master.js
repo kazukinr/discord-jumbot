@@ -4,5 +4,10 @@ exports.isTarget = function (message) {
 }
 
 exports.run = function (client, message) {
-    message.channel.sendMessage('御意');
+    message.channel.sendMessage(REACTIONS[Math.floor(Math.random() * REACTIONS.length)]);
 }
+
+const REACTIONS = [
+    "うむ",
+    "承知"
+]
