@@ -51,9 +51,14 @@ exports.run = function (client, message, args) {
                 break;
             }
 
+            var title = '相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。';
+            if (monster_info[jsonKey].ancient) {
+                title += '\n古龍種なので罠は通用しないぞ。';
+            }
+
             const embed = new Discord.RichEmbed()
                 .setAuthor('受付嬢', client.user.avatarURL)
-                .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
+                .setTitle(title)
                 .setImage('attachment://image.png')
                 .attachFile(toImagePath(jsonKey), 'image.png');
 
