@@ -5,7 +5,8 @@ const reactions = [
     require('./reaction/nazeda'),
     require('./reaction/middle_finger'),
     require('./reaction/eggplant'),
-    require('./reaction/sord_master')
+    require('./reaction/sord_master'),
+    require('./reaction/commander')
 ]
 
 exports.run = function (client, message) {
