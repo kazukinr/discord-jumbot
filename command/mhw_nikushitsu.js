@@ -1,8 +1,19 @@
 // MHW nikushitsu.
 const Discord = require('discord.js');
+const fs = require('fs');
 
 const monster_key = require('../util/monster_key');
 const monster_info = require('../json/monster_info.json');
+
+// Read image directory on launch.
+const imagePaths = [];
+fs.readdir('image/nikushitsu', function (err, files) {
+    if (err) throw err;
+    files
+        .filter(file => /.*\.png$/.test(file))
+        .map(file => file.match(/(.+)(\.[^.]+$)/)[1])
+        .forEach(fileName => imagePaths.push(fileName))
+});
 
 exports.command = 'niku';
 
@@ -32,8 +43,7 @@ exports.run = function (client, message, args) {
             break;
         }
 
-        const img = monster_info[jsonKey].nikushitsu;
-        if (img == null || img == '') {
+        if (!imagePaths.includes(jsonKey)) {
             message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
             break;
         }
@@ -41,8 +51,8 @@ exports.run = function (client, message, args) {
         const embed = new Discord.RichEmbed()
             .setAuthor('受付嬢', client.user.avatarURL)
             .setTitle('相棒！　' + monster_info[jsonKey].name + 'の肉質情報だぞ。')
-            .setImage('attachment://image.jpg')
-            .attachFile('image/' + monster_info[jsonKey].nikushitsu, 'image.jpg');
+            .setImage('attachment://image.png')
+            .attachFile(toImagePath(jsonKey), 'image.png');
 
         message.channel.sendEmbed(embed);
     }
@@ -53,11 +63,10 @@ function showList(client, message) {
     var listNotExist = "";
 
     for (let key in monster_info) {
-        const val = monster_info[key];
-        if (val.nikushitsu == null || val.nikushitsu == '') {
-            listNotExist += '- ' + val.name + '\n';
+        if (imagePaths.includes(key)) {
+            listExist += '- ' + monster_info[key].name + '\n';
         } else {
-            listExist += '- ' + val.name + '\n';
+            listNotExist += '- ' + monster_info[key].name + '\n';
         }
     }
 
@@ -68,4 +77,8 @@ function showList(client, message) {
         .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
 
     message.channel.sendEmbed(embed);
+}
+
+function toImagePath(key) {
+    return 'image/nikushitsu/' + key + '.png';
 }

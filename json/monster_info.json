@@ -1,126 +1,95 @@
 {
     "anjanaf": {
-        "name": "アンジャナフ",
-        "nikushitsu": "anjanaf_nikushitsu.png"
+        "name": "アンジャナフ"
     },
     "jaw": {
-        "name": "イビルジョー",
-        "nikushitsu": ""
+        "name": "イビルジョー"
     },
     "valhazak": {
-        "name": "ヴァルハザク",
-        "nikushitsu": ""
+        "name": "ヴァルハザク"
     },
     "ganos": {
-        "name": "ヴォルガノス",
-        "nikushitsu": "ganos_nikushitsu.png"
+        "name": "ヴォルガノス"
     },
     "gankin": {
-        "name": "ウラガンキン",
-        "nikushitsu": "gankin_nikushitsu.png"
+        "name": "ウラガンキン"
     },
     "garon": {
-        "name": "オドガロン",
-        "nikushitsu": "garon_nikushitsu.png"
+        "name": "オドガロン"
     },
     "kirin": {
-        "name": "キリン",
-        "nikushitsu": "kirin_nikushitsu.png"
+        "name": "キリン"
     },
     "kusha": {
-        "name": "クシャルダオラ",
-        "nikushitsu": "kusha_nikushitsu.png"
+        "name": "クシャルダオラ"
     },
     "kururuyack": {
-        "name": "クルルヤック",
-        "nikushitsu": "kururuyack_nikushitsu.png"
+        "name": "クルルヤック"
     },
     "jura": {
-        "name": "ジュラトドス",
-        "nikushitsu": "jura_nikushitsu.png"
+        "name": "ジュラトドス"
     },
     "zeno": {
-        "name": "ゼノ・ジーヴァ",
-        "nikushitsu": ""
+        "name": "ゼノ・ジーヴァ"
     },
     "zora": {
-        "name": "ゾラ・マグダラオス",
-        "nikushitsu": "zora_nikushitsu.png"
+        "name": "ゾラ・マグダラオス"
     },
     "twitwiyack": {
-        "name": "ツィツィヤック",
-        "nikushitsu": "twitwiyack_nikushitsu.png"
+        "name": "ツィツィヤック"
     },
     "dia": {
-        "name": "ディアブロス",
-        "nikushitsu": "dia_nikushitsu.png"
+        "name": "ディアブロス"
     },
     "dia_a": {
-        "name": "ディアブロス亜種",
-        "nikushitsu": ""
+        "name": "ディアブロス亜種"
     },
     "teo": {
-        "name": "テオ・テスカトル",
-        "nikushitsu": "teo_nikushitsu.png"
+        "name": "テオ・テスカトル"
     },
     "giruos": {
-        "name": "ドスギルオス",
-        "nikushitsu": "giruos_nikushitsu.png"
+        "name": "ドスギルオス"
     },
     "jagras": {
-        "name": "ドスジャグラス",
-        "nikushitsu": "jagras_nikushitsu.png"
+        "name": "ドスジャグラス"
     },
     "gamaru": {
-        "name": "ドドガマル",
-        "nikushitsu": "gamaru_nikushitsu.png"
+        "name": "ドドガマル"
     },
     "kagachi": {
-        "name": "トビカガチ",
-        "nikushitsu": "kagachi_nikushitsu.png"
+        "name": "トビカガチ"
     },
     "gigante": {
-        "name": "ネルギガンテ",
-        "nikushitsu": "gigante_nikushitsu.png"
+        "name": "ネルギガンテ"
     },
     "paourumu": {
-        "name": "パオウルムー",
-        "nikushitsu": "paourumu_nikushitsu.png"
+        "name": "パオウルムー"
     },
     "bazeru": {
-        "name": "バゼルギウス",
-        "nikushitsu": "bazeru_nikushitsu.png"
+        "name": "バゼルギウス"
     },
     "pukepuke": {
-        "name": "プケプケ",
-        "nikushitsu": "pukepuke_nikushitsu.png"
+        "name": "プケプケ"
     },
     "boros": {
-        "name": "ボルボロス",
-        "nikushitsu": "boros_nikushitsu.png"
+        "name": "ボルボロス"
     },
     "barukin": {
-        "name": "ラドバルキン",
-        "nikushitsu": "barukin_nikushitsu.png"
+        "name": "ラドバルキン"
     },
     "reia": {
-        "name": "リオレイア",
-        "nikushitsu": "reia_nikushitsu.png"
+        "name": "リオレイア"
     },
     "reia_a": {
-        "name": "リオレイア亜種",
-        "nikushitsu": "reia_a_nikushitsu.png"
+        "name": "リオレイア亜種"
     },
     "reus": {
-        "name": "リオレウス",
-        "nikushitsu": "reus_nikushitsu.png"
+        "name": "リオレウス"
     },
     "reus_a": {
-        "name": "リオレウス亜種",
-        "nikushitsu": "reus_a_nikushitsu.png"
+        "name": "リオレウス亜種"
     },
     "reigiena": {
-        "name": "レイギエナ",
-        "nikushitsu": "reigiena_nikushitsu.png"
+        "name": "レイギエナ"
     }
 }
