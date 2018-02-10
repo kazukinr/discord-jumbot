@@ -5,6 +5,16 @@ const fs = require('fs');
 const monster_key = require('../util/monster_key');
 const monster_info = require('../json/monster_info.json');
 
+// Read image directory on launch.
+const imagePaths = [];
+fs.readdir('image/nikushitsu', function (err, files) {
+    if (err) throw err;
+    files
+        .filter(file => /.*\.png$/.test(file))
+        .map(file => file.match(/(.+)(\.[^.]+$)/)[1])
+        .forEach(fileName => imagePaths.push(fileName))
+});
+
 exports.command = 'niku';
 
 exports.run = function (client, message, args) {
@@ -33,7 +43,7 @@ exports.run = function (client, message, args) {
             break;
         }
 
-        if (!exists(jsonKey)) {
+        if (!imagePaths.includes(jsonKey)) {
             message.channel.sendMessage(monster_info[jsonKey].name + 'のにくしつは　まだないぞ。\nはんたーのーとのすくしょを　とってもらえると　たすかるぞ。');
             break;
         }
@@ -53,7 +63,7 @@ function showList(client, message) {
     var listNotExist = "";
 
     for (let key in monster_info) {
-        if (exists(key)) {
+        if (imagePaths.includes(key)) {
             listExist += '- ' + monster_info[key].name + '\n';
         } else {
             listNotExist += '- ' + monster_info[key].name + '\n';
@@ -67,15 +77,6 @@ function showList(client, message) {
         .addField('いかの　もんすたーは　すくしょぼしゅうちゅうだぞ。', listNotExist);
 
     message.channel.sendEmbed(embed);
-}
-
-function exists(key) {
-    try {
-        fs.statSync(toImagePath(key));
-        return true;
-    } catch (e) {
-        return false;
-    }
 }
 
 function toImagePath(key) {
