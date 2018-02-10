@@ -18,10 +18,12 @@
         "name": "オドガロン"
     },
     "kirin": {
-        "name": "キリン"
+        "name": "キリン",
+        "ancient": true
     },
     "kusha": {
-        "name": "クシャルダオラ"
+        "name": "クシャルダオラ",
+        "ancient": true
     },
     "kururuyack": {
         "name": "クルルヤック"
@@ -30,10 +32,12 @@
         "name": "ジュラトドス"
     },
     "zeno": {
-        "name": "ゼノ・ジーヴァ"
+        "name": "ゼノ・ジーヴァ",
+        "ancient": true
     },
     "zora": {
-        "name": "ゾラ・マグダラオス"
+        "name": "ゾラ・マグダラオス",
+        "ancient": true
     },
     "twitwiyack": {
         "name": "ツィツィヤック"
@@ -45,7 +49,8 @@
         "name": "ディアブロス亜種"
     },
     "teo": {
-        "name": "テオ・テスカトル"
+        "name": "テオ・テスカトル",
+        "ancient": true
     },
     "giruos": {
         "name": "ドスギルオス"
@@ -60,7 +65,8 @@
         "name": "トビカガチ"
     },
     "gigante": {
-        "name": "ネルギガンテ"
+        "name": "ネルギガンテ",
+        "ancient": true
     },
     "paourumu": {
         "name": "パオウルムー"
