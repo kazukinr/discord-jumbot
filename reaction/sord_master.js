@@ -8,6 +8,9 @@ exports.run = function (client, message) {
 }
 
 const REACTIONS = [
-    "うむ",
-    "承知"
+    'うむ。',
+    '承知。',
+    'あれは必ず来る。不穏の音よ。',
+    '某もゆこう。',
+    'いざ。'
 ]
