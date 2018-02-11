@@ -29,7 +29,11 @@ exports.run = function (client, message, args) {
 
     for (var i = 0; i < args.length; i++) {
         if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
-            message.channel.sendMessage('おやだまで　ひたいを　なぐろう。');
+            if (Math.floor(Math.random() * 2) == 0) {
+                message.channel.sendMessage('おやだまを　つかうと　てんとうするぞ。');
+            } else {
+                message.channel.sendMessage('ひたいが　ぶいはかいかのうだぞ。');
+            }
             break;
         }
         if (/^はぢ(さん)?$/.test(args[i])) {
