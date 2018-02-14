@@ -22,8 +22,8 @@ exports.run = function (client, message) {
         (async function() {
             let mongo_client = null;
             try {
-                const client = mongo_client = await MongoClient.connect(process.env.MONGODB_URI);
-                let db = client.db(DB_NAME);
+                mongo_client = await MongoClient.connect(process.env.MONGODB_URI);
+                let db = mongo_client.db(DB_NAME);
                 const users = await db.collection("users");
                 let word;
                 if(delta > 0) {
