@@ -36,8 +36,8 @@ function help(message) {
     for (var i = 0; i < commands.length; i++) {
         embed = embed.addField(
             commands[i].command,
-            commands[i].help
-        ).addBlankField();
+            commands[i].help + '\n'
+        );
     }
     message.channel.sendEmbed(embed);
 }
