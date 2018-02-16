@@ -35,10 +35,11 @@ function help(message) {
     var embed = new Discord.RichEmbed()
         .setTitle('Usage : !<command> <options>');
     for (var i = 0; i < commands.length; i++) {
-        embed = embed.addField(
-            commands[i].command,
-            commands[i].help + '\n'
-        );
+        embed = embed.addBlankField(true)
+            .addField(
+                commands[i].command,
+                commands[i].help
+            );
     }
     message.channel.sendEmbed(embed);
 }
