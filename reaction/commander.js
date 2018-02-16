@@ -4,5 +4,11 @@ exports.isTarget = function (message) {
 }
 
 exports.run = function (client, message) {
-    message.channel.sendMessage('さくせんかいぎを　はじめるぞ。');
+    message.channel.sendMessage(REACTIONS[Math.floor(Math.random() * REACTIONS.length)]);
 }
+
+const REACTIONS = [
+    'これより　きんきゅうさくせんかいぎを　はじめるぞ',
+    'ぐたいてきなしじは　げんばでおこなうぞ',
+    'みちびきの　あおいほしが　かがやかんことを'
+]
