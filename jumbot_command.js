@@ -33,6 +33,7 @@ exports.run = function (client, message, command, args) {
 
 function help(message) {
     var embed = new Discord.RichEmbed()
+        .setTitle('Usage : !<command> <options>');
     for (var i = 0; i < commands.length; i++) {
         embed = embed.addField(
             commands[i].command,
