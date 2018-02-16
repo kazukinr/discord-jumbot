@@ -8,17 +8,14 @@ exports.run = function (client, message) {
 }
 
 function buildMessage() {
-    const rand = Math.floor(Math.random() * 10);
-    if (rand < 3) {
+    const rand = Math.floor(Math.random() * 20);
+    if (rand < 4) {
         return 'いいぞ。';
     }
-    if (rand < 5) {
+    if (rand < 8) {
         return 'もっと　がんばらないと　だめだぞ。';
     }
-    if (rand < 6) {
-        return 'いちりゅうの　ごるふぁーに　なれ';
-    }
-    if (rand < 7) {
+    if (rand < 12) {
         return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
     }
     var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
@@ -26,6 +23,7 @@ function buildMessage() {
 }
 
 const RARE_REACTIONS = [
+    'いちりゅうの　ごるふぁーに　なれ',
     'うが　いいんじゃないかな。',
     'うみから　うとう。',
     'うみきれないよ。',
