@@ -18,7 +18,7 @@ fs.readdir('image/nikushitsu', function (err, files) {
 exports.command = 'niku';
 
 exports.help = '!niku <モンスター名> : もんすたーの　にくしつを　ひょうじするぞ。\n'
-    + '!niku list|-l : もんすたーの　いちらんを　ひょうじするぞ。';
+    + '!niku list | -l : もんすたーの　いちらんを　ひょうじするぞ。';
 
 exports.run = function (client, message, args) {
     if (args == null || args.length == 0) {
