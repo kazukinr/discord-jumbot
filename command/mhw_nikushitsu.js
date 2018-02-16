@@ -29,15 +29,11 @@ exports.run = function (client, message, args) {
 
     for (var i = 0; i < args.length; i++) {
         if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
-            if (Math.floor(Math.random() * 2) == 0) {
-                message.channel.sendMessage('おやだまを　つかうと　てんとうするぞ。');
-            } else {
-                message.channel.sendMessage('ひたいが　ぶいはかいかのうだぞ。');
-            }
+            message.channel.sendMessage(TSUKI_REACTIONS[Math.floor(Math.random() * TSUKI_REACTIONS.length)])
             break;
         }
         if (/^はぢ(さん)?$/.test(args[i])) {
-            message.channel.sendMessage('なすで　なぐろう。');
+            message.channel.sendMessage(HAZI_REACTIONS[Math.floor(Math.random() * HAZI_REACTIONS.length)])
             break;
         }
 
@@ -93,3 +89,15 @@ function showList(client, message) {
 function toImagePath(key) {
     return 'image/nikushitsu/' + key + '.png';
 }
+
+const HAZI_REACTIONS = [
+    'なすで　なぐろう。',
+    'なすを　くちに　ねじこんで　えーい',
+    '(っ’ヮ’)╮-=ﾆ= 三≡’,;’;🍆'
+]
+
+const TSUKI_REACTIONS = [
+    'おやだまを　つかうと　てんとうするぞ。',
+    'ひたいは　ぶいはかいが　かのうだぞ。',
+    'ひたいを　ねらおう'
+]
