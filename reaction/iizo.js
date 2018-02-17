@@ -9,13 +9,13 @@ exports.run = function (client, message) {
 
 function buildMessage() {
     const rand = Math.floor(Math.random() * 20);
-    if (rand < 4) {
+    if (rand < 3) {
         return 'いいぞ。';
     }
-    if (rand < 8) {
+    if (rand < 6) {
         return 'もっと　がんばらないと　だめだぞ。';
     }
-    if (rand < 12) {
+    if (rand < 9) {
         return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
     }
     var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
@@ -23,6 +23,8 @@ function buildMessage() {
 }
 
 const RARE_REACTIONS = [
+    'H',
+    'HHHHH',
     'いちりゅうの　ごるふぁーに　なれ',
     'うが　いいんじゃないかな。',
     'うみから　うとう。',
@@ -43,6 +45,8 @@ const RARE_REACTIONS = [
     'ないよ。',
     'なかたにねらいをさだめて　うとう。',
     'なぞ。',
+    'なな',
+    'なにごともひとに　　　あわせなければ　だめだぞ。',
     'なにを　かんがえよう。',
     'なんとたこに　た゛したほうがいいそ゛。',
     'なんどな',
