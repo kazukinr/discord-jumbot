@@ -1,6 +1,8 @@
 // Buki Roulette.
 exports.command = 'buki';
 
+exports.help = 'らんだむで　ぶきを　えらぶぞ。';
+
 exports.run = function (client, message, args) {
     const index = Math.floor(Math.random() * BUKI_LIST.length);
     message.channel.sendMessage(message.author.username + 'は　' + BUKI_LIST[index] + 'をつかわないと　だめだぞ。');

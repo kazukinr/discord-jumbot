@@ -3,6 +3,8 @@ const Discord = require('discord.js');
 
 exports.command = 'emoji';
 
+exports.help = 'とうろくされている　えもじのいちらんを　ひょうじするぞ。';
+
 exports.run = function (client, message, args) {
     const guild = message.guild;
     if (guild != null) {
