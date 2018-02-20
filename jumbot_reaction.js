@@ -6,7 +6,8 @@ const reactions = [
     require('./reaction/middle_finger'),
     require('./reaction/eggplant'),
     require('./reaction/sord_master'),
-    require('./reaction/commander')
+    require('./reaction/commander'),
+    require('./reaction/achievement')
 ]
 
 exports.run = function (client, message) {
