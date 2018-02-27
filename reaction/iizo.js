@@ -8,14 +8,14 @@ exports.run = function (client, message) {
 }
 
 function buildMessage() {
-    const rand = Math.floor(Math.random() * 20);
-    if (rand < 3) {
+    const rand = Math.floor(Math.random() * 100);
+    if (rand < 10) {
         return 'いいぞ。';
     }
-    if (rand < 6) {
+    if (rand < 20) {
         return 'もっと　がんばらないと　だめだぞ。';
     }
-    if (rand < 9) {
+    if (rand < 25) {
         return 'もうめんどうみきれないよ。でも　あきらめちゃだめだぞ。';
     }
     var rareIndex = Math.floor(Math.random() * RARE_REACTIONS.length);
