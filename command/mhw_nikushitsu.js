@@ -31,7 +31,7 @@ exports.run = function (client, message, args) {
     }
 
     for (var i = 0; i < args.length; i++) {
-        if (/^(つきむら|月村|つっきー)(さん|くん|君|氏)?$/.test(args[i])) {
+        if (/^(つきむら|月村|つっきー|団長)(さん|くん|君|氏)?$/.test(args[i])) {
             message.channel.sendMessage(TSUKI_REACTIONS[Math.floor(Math.random() * TSUKI_REACTIONS.length)])
             break;
         }
