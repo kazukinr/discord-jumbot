@@ -53,10 +53,12 @@
         "ancient": true
     },
     "giruos": {
-        "name": "ドスギルオス"
+        "name": "ドスギルオス",
+        "ignore": true
     },
     "jagras": {
-        "name": "ドスジャグラス"
+        "name": "ドスジャグラス",
+        "ignore": true
     },
     "gamaru": {
         "name": "ドドガマル"
