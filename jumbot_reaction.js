@@ -7,7 +7,8 @@ const reactions = [
     require('./reaction/eggplant'),
     require('./reaction/sord_master'),
     require('./reaction/commander'),
-    require('./reaction/poop')
+    require('./reaction/poop'),
+    require('./reaction/dice')
 ]
 
 exports.run = function (client, message) {
