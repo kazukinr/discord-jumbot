@@ -6,7 +6,7 @@ exports.help = '!buki : らんだむで　ぶきを　えらぶぞ。\n'
 
 exports.run = function (client, message, args) {
     const index = Math.floor(Math.random() * BUKI_LIST.length);
-    const result = message.author.username + 'は　' + BUKI_LIST[index] + 'をつかわないと　だめだぞ。';
+    let result = message.author.username + 'は　' + BUKI_LIST[index] + 'をつかわないと　だめだぞ。';
     if (args.length == 1 && /^[0-9]+d[0-9]+$/.test(args[0])) {
         const params = args[0].match(/^([0-9]+)d([0-9]+)$/);
         const count = params[1];
