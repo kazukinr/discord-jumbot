@@ -38,8 +38,8 @@ export class RocketLeagueTeam implements MessageHandler {
             });
 
             var result = "";
-            result += "ブルー　 : " + blueMembers.join(" , ") + "\n";
-            result += "オレンジ : " + orangeMembers.join(" , ")
+            result += "ブルー　：" + blueMembers.join(" , ") + "\n";
+            result += "オレンジ：" + orangeMembers.join(" , ")
 
             message.channel.send(result, {
                 tts: true
