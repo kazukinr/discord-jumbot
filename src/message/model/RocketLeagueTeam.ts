@@ -13,6 +13,13 @@ export class RocketLeagueTeam implements MessageHandler {
             const members = message.member.voiceChannel.members;
             if (members.size <= 1) {
                 message.channel.send("ぼっちだぞ");
+
+                members.forEach((member, key) => {
+                    message.channel.send("デバッグ情報です。");
+                    message.channel.send("member.nickname : " + member.nickname);
+                    message.channel.send("member.user.username : " + member.user.username);
+                })
+
                 return true
             }
 
@@ -37,8 +44,8 @@ export class RocketLeagueTeam implements MessageHandler {
             });
 
             var result = "";
-            result += "ブルー　: " + blueMembers.join(" , ") + "\n";
-            result += "オレンジ: " + orangeMembers.join(" , ")
+            result += "ブルー　 : " + blueMembers.join(" , ") + "\n";
+            result += "オレンジ : " + orangeMembers.join(" , ")
 
             message.channel.send(result, {
                 tts: true
