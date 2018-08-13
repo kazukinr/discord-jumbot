@@ -12,9 +12,8 @@ client.on("message", message => {
     try {
         messageController.onMessageReceived(client, message)
     } catch (e) {
-        message.channel.sendMessage("An exception occurred. \n" + e)
+        message.channel.send("An exception occurred. \n" + e)
     }
 })
 
 client.login(process.env.BOT_TOKEN);
-

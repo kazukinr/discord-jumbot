@@ -21,7 +21,7 @@ export class Dice implements MessageHandler {
                 }
                 result += (Random.nextInt(max) + 1).toString();
             }
-            message.channel.sendMessage(result);
+            message.channel.send(result);
             return true;
         }
         return false;
