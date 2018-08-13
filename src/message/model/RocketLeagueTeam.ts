@@ -1,6 +1,7 @@
 import { MessageHandler } from "../MessageHandler";
 import { Client, Message } from "discord.js";
 import { Random } from "../../util/Random";
+import { MemberUtiils } from "../../util/MemberUtils";
 
 /**
  * Grouping members in voice channel into team BLUE or ORANGE.
@@ -15,11 +16,8 @@ export class RocketLeagueTeam implements MessageHandler {
                 message.channel.send("ぼっちだぞ");
 
                 members.forEach((member, key) => {
-                    message.channel.send("デバッグ情報です。");
-                    message.channel.send("member.nickname : " + member.nickname);
-                    message.channel.send("member.user.username : " + member.user.username);
+                    message.channel.send("デバッグ情報です。 : " + MemberUtiils.getValidName(member));
                 })
-
                 return true
             }
 
@@ -31,14 +29,14 @@ export class RocketLeagueTeam implements MessageHandler {
 
             members.forEach((member, key) => {
                 if (blueMembers.length >= blueSize) {
-                    orangeMembers.push(member.nickname);
+                    orangeMembers.push(MemberUtiils.getValidName(member));
                 } else if (orangeMembers.length >= orangeSize) {
-                    blueMembers.push(member.nickname);
+                    blueMembers.push(MemberUtiils.getValidName(member));
                 } else {
                     if (Random.nextInt(2) == 0) {
-                        blueMembers.push(member.nickname);
+                        blueMembers.push(MemberUtiils.getValidName(member));
                     } else {
-                        orangeMembers.push(member.nickname);
+                        orangeMembers.push(MemberUtiils.getValidName(member));
                     }
                 }
             });
