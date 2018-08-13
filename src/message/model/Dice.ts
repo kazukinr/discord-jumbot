@@ -1,5 +1,6 @@
 import { MessageHandler } from "../MessageHandler";
 import { Client, Message } from "discord.js";
+import { Random } from "../../util/Random";
 
 export class Dice implements MessageHandler {
 
@@ -18,7 +19,7 @@ export class Dice implements MessageHandler {
                 if (i > 0) {
                     result += "\n";
                 }
-                result += Math.ceil(Math.random() * max).toString();
+                result += (Random.nextInt(max) + 1).toString();
             }
             return true;
         }
