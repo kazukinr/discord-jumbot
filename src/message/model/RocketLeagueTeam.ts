@@ -14,10 +14,6 @@ export class RocketLeagueTeam implements MessageHandler {
             const members = message.member.voiceChannel.members;
             if (members.size <= 1) {
                 message.channel.send("ぼっちだぞ");
-
-                members.forEach((member, key) => {
-                    message.channel.send("デバッグ情報です。 : " + MemberUtiils.getValidName(member));
-                })
                 return true
             }
 
