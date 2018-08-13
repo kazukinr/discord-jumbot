@@ -14,13 +14,14 @@ export class Dice implements MessageHandler {
                 return true;
             }
 
-            var result: String = "";
+            var result = "";
             for (var i = 0; i < count; i++) {
                 if (i > 0) {
                     result += "\n";
                 }
                 result += (Random.nextInt(max) + 1).toString();
             }
+            message.channel.sendMessage(result);
             return true;
         }
         return false;
