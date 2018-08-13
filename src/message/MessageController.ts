@@ -1,5 +1,5 @@
 import { Client, Message } from "discord.js";
-import { Dice } from "./model/dice";
+import { Dice } from "./model/Dice";
 import { MessageHandler } from "./MessageHandler";
 
 export class MessageController {
