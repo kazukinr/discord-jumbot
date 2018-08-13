@@ -2,6 +2,10 @@ import { MessageHandler } from "../MessageHandler";
 import { Client, Message } from "discord.js";
 import { Random } from "../../util/Random";
 
+/**
+ * Throw dice and send result as a message.
+ * command: {count}d{max}  for example, 3d100 means dice100 will be thrown 3 time.
+ */
 export class Dice implements MessageHandler {
 
     handleMessage(client: Client, message: Message): boolean {
@@ -21,7 +25,7 @@ export class Dice implements MessageHandler {
                 }
                 result += (Random.nextInt(max) + 1).toString();
             }
-            message.channel.sendMessage(result);
+            message.channel.send(result);
             return true;
         }
         return false;
