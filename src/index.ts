@@ -1,15 +1,18 @@
-import { Client } from 'discord.js'
+import { Client } from "discord.js"
+import { MessageController } from "./message/MessageController";
 const client = new Client()
+const messageController = new MessageController()
 
-client.on('ready', () => {
-    console.log('I am ready!');
+client.on("ready", () => {
+    console.log("I am ready!");
 })
 
-client.on('message', message => {
+client.on("message", message => {
     if (message.author.bot) return;
-
-    if (message.content == 'ping') {
-        message.channel.sendMessage('pong');
+    try {
+        messageController.onMessageReceived(client, message)
+    } catch (e) {
+        message.channel.sendMessage("An exception occurred. \n" + e)
     }
 })
 
