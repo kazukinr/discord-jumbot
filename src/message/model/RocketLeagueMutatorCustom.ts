@@ -23,6 +23,7 @@ export class RocketLeagueMutatorCustom implements MessageHandler {
     handleMessage(client: Client, message: Message): boolean {
         if (message.content == "mc") {
             var result = "次の試合は\n";
+            result += "\n";
             result += "ゲームスピード : " + this.GAME_SPEED[Random.nextInt(this.GAME_SPEED.length)] + "\n";
             result += "ボール最高速度 : " + this.BALL_MAX_SPEED[Random.nextInt(this.BALL_MAX_SPEED.length)] + "\n";
             result += "ボールタイプ　 : " + this.BALL_TYPE[Random.nextInt(this.BALL_TYPE.length)] + "\n";
@@ -35,6 +36,7 @@ export class RocketLeagueMutatorCustom implements MessageHandler {
             result += "重力　　　　　 : " + this.GRAVITY[Random.nextInt(this.GRAVITY.length)] + "\n";
             result += "破壊　　　　　 : " + this.DESTROY[Random.nextInt(this.DESTROY.length)] + "\n";
             result += "リスポーン期間 : " + this.RESPAWN_TIME[Random.nextInt(this.RESPAWN_TIME.length)] + "\n";
+            result += "\n";
             result += "で　いこう";
             message.channel.send(result);
 
