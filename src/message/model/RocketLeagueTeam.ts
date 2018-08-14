@@ -17,16 +17,14 @@ export class RocketLeagueTeam implements MessageHandler {
                 return true
             }
 
-            const blueSize = Math.ceil(members.size / 2);
-            const orangeSize = Math.floor(members.size / 2);
-
+            const maxSize = Math.ceil(members.size / 2);
             const blueMembers = new Array<string>();
             const orangeMembers = new Array<string>();
 
             members.forEach((member, key) => {
-                if (blueMembers.length >= blueSize) {
+                if (blueMembers.length >= maxSize) {
                     orangeMembers.push(MemberUtiils.getValidName(member));
-                } else if (orangeMembers.length >= orangeSize) {
+                } else if (orangeMembers.length >= maxSize) {
                     blueMembers.push(MemberUtiils.getValidName(member));
                 } else {
                     if (Random.nextInt(2) == 0) {
