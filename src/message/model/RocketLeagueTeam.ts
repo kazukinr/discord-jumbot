@@ -10,7 +10,7 @@ import { MemberUtiils } from "../../util/MemberUtils";
 export class RocketLeagueTeam implements MessageHandler {
 
     handleMessage(client: Client, message: Message): boolean {
-        if (message.content == "team" && message.member.voiceChannel) {
+        if (message.content == "team" && message.member && message.member.voiceChannel) {
             const members = message.member.voiceChannel.members;
             if (members.size <= 1) {
                 message.channel.send("ぼっちだぞ");
