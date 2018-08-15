@@ -1,7 +1,7 @@
 import { MessageHandler } from "../MessageHandler";
 import { Client, Message } from "discord.js";
 import { Random } from "../../util/Random";
-import { MemberUtiils } from "../../util/MemberUtils";
+import { GuildMemberExtensions } from "../../extensions/GuildMemberExtensions";
 
 /**
  * Grouping members in voice channel into team BLUE or ORANGE.
@@ -23,14 +23,14 @@ export class RocketLeagueTeam implements MessageHandler {
 
             members.forEach((member, key) => {
                 if (blueMembers.length >= maxSize) {
-                    orangeMembers.push(MemberUtiils.getValidName(member));
+                    orangeMembers.push(GuildMemberExtensions.displayName(member));
                 } else if (orangeMembers.length >= maxSize) {
-                    blueMembers.push(MemberUtiils.getValidName(member));
+                    blueMembers.push(GuildMemberExtensions.displayName(member));
                 } else {
                     if (Random.nextInt(2) == 0) {
-                        blueMembers.push(MemberUtiils.getValidName(member));
+                        blueMembers.push(GuildMemberExtensions.displayName(member));
                     } else {
-                        orangeMembers.push(MemberUtiils.getValidName(member));
+                        orangeMembers.push(GuildMemberExtensions.displayName(member));
                     }
                 }
             });
